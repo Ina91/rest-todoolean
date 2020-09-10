@@ -13,13 +13,18 @@
     </head>
     <body>
 
-        <input type="text" name="" value="" id= "nuova-voce" placeholder="inserisci una nuova voce">
-        <input class="inserisci" type="submit" name="" value="invia">
+        <input type="text"  id= "nuova-voce" placeholder="inserisci una nuova voce">
+        <button class="inserisci">Inserisci</button>
+
         <ol class="todos"></ol>
 
         <script id="entry-template" type="text/x-handlebars-template">
-            <li data-id={{id}}>{{text}}
-            <span class="delete">X</span> </li> <!-- meddo data-id={{id}} per poi visualizzare l'id che ho aggiunto in context (js)-->
+            <!-- uso data-id={{id}} per poi visualizzare l'id che ho aggiunto in context (js)-->
+            <li data-id={{id}}>
+                <span class="testo">{{text}}</span>
+                <input class="hidden input-add" type="text" value="{{text}}">
+                <span class="delete">X</span>
+            </li>
         </script>
 
         <script src="js/script.js" charset="utf-8"></script>
